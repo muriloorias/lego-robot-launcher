@@ -6,12 +6,11 @@
   <link rel="stylesheet" href="styles.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tauri App</title>
-  <script type="module" src="/main.js" defer></script>
 </head>
 
 <body>
   <main>
-    <div class="leftBar">
+    <div class="sidebar">
       <ul>
         <li>
           <a href="index.html">Home</a>
@@ -27,14 +26,29 @@
     <div class="principal">
       <h1>seus jogos</h1>
       <ul class="games">
-        <li class="item">
-          <img src="assets/jogo.png" width="200" height="200">
-          <p id="isDownloaded">seu jogo ainda não foi instalado</p>
-          <img src="assets/downloadImg.png" width="50" height="50" >
-          <button>faça o download agora</button>
+        <li>
+          <div class="item" id="game">
+            <div class="img-container">
+              <img src="assets/jogo.png" class="main-img" width="260" height="260">
+              <img src="assets/downloadImg.png" id="isDowloadedIcon" class="icon" width="50" height="50">
+              <p id="isDownloadedText">o jogo ainda não foi instalado</p>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
+    </li>
+    </ul>
+    </div>
   </main>
+  <footer>
+    <a href="pages/configs.html">já tem alguma versão instalada localize ela nas configurações</a>
+  </footer>
+  <script src="js/downloading.js"></script>
+  <script>
+    VerifyIsDownloaded();
+  </script>
+
 </body>
+
 </html>
