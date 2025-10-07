@@ -1,5 +1,7 @@
 import { invoke } from "@tauri-apps/api/tauri";
 
+
+
 async function VerifyIsDownloaded() {
     await invoke("verify_downloaded");
 

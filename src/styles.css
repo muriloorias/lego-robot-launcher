@@ -170,6 +170,17 @@ ul {
   background-color: #34495e;
 }
 
+/* Inputs */
+input[type="text"]{
+    width: 200%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.buttonSave{
+  margin-top: 10px;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     color: #f6f6f6;
