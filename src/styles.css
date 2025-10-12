@@ -171,16 +171,71 @@ ul {
 }
 
 /* Inputs */
-input[type="text"]{
-    width: 200%;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 5px;
+input[type="text"] {
+  width: 200%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
 
-.buttonSave{
+#alert {
+  display: flex; /* já é flex */
+  flex-direction: column; /* importante pro alinhamento vertical */
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 999;
+
+  opacity: 0; /* começa invisível */
+  pointer-events: none; /* não clicável */
+  transition: opacity 0.3s ease;
+}
+
+#alert.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+.alert-box {
+  background: #1e1e1e;
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  width: 300px;
+}
+
+.alert-box h2 {
+  margin: 0 0 10px;
+  color: #ff4a4a;
+}
+
+.alert-box p {
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.alert-box button {
+  background: #4a4aff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.buttonSave {
   margin-top: 10px;
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     color: #f6f6f6;

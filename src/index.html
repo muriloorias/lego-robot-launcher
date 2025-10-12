@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="styles.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tauri App</title>
+  <title>Lego Robot launcher</title>
 </head>
 
 <body>
@@ -46,9 +46,15 @@
   </footer>
   <script src="js/downloading.js"></script>
   <script>
+    let backEndOn = false; // false = backend desligado
+
+    if (!backEndOn) {
+      alert("o servido esta desligado. Algumas coisas não vão funcionar")
+    } 
+  </script>
+  <script>
     VerifyIsDownloaded();
   </script>
-
 </body>
 
 </html>
